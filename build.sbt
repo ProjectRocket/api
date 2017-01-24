@@ -13,15 +13,18 @@ resolvers ++= Seq("Typesafe Repository" at "http://repo.typesafe.com/typesafe/re
   Resolver.bintrayRepo("hseeberger", "maven"))
 
 libraryDependencies ++= {
-  val AkkaVersion       = "2.3.9"
-  val AkkaHttpVersion   = "2.4.11"
-  val Json4sVersion     = "3.2.11"
+  val AkkaVersion = "2.3.9"
+  val AkkaHttpVersion = "2.4.11"
+  val Json4sVersion = "3.2.11"
+  val AkkaHttpTestkitVersion = "2.4.2-RC3"
   Seq(
-    "com.typesafe.akka" %% "akka-slf4j"      % AkkaVersion,
+    "com.typesafe.akka" %% "akka-slf4j" % AkkaVersion,
     "com.typesafe.akka" %% "akka-http-experimental" % AkkaHttpVersion,
-    "ch.qos.logback"    %  "logback-classic" % "1.1.2",
-    "org.json4s"        %% "json4s-native"   % Json4sVersion,
-    "org.json4s"        %% "json4s-ext"      % Json4sVersion,
+    "com.typesafe.akka" %% "akka-http-testkit-experimental" % AkkaHttpTestkitVersion,
+    "org.scalatest" %% "scalatest" % "2.2.5" % "test",
+    "ch.qos.logback" % "logback-classic" % "1.1.2",
+    "org.json4s" %% "json4s-native" % Json4sVersion,
+    "org.json4s" %% "json4s-ext" % Json4sVersion,
     "de.heikoseeberger" %% "akka-http-json4s" % "1.4.2"
   )
 }

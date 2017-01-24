@@ -6,7 +6,7 @@ import akka.http.scaladsl.model.StatusCodes
 /**
   * Created by bento on 24/01/2017.
   */
-class RestSpec extends WordSpec with Matchers with ScalatestRouteTest with RestService {
+class RestServiceTest extends WordSpec with Matchers with ScalatestRouteTest with RestService {
 
   implicit val tildeArrow = TildeArrow.injectIntoRoute
 
